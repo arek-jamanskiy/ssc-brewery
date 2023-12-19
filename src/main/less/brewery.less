@@ -50,11 +50,32 @@
 @pagination-active-border:                @spring-green;
 @table-border-color:                      @spring-brown;
 
+@alert-info-bg: @spring-light-grey;
+@alert-info-border: #00000000;
+@alert-info-text: #ffffff;
+
+@alert-warning-bg: @spring-light-grey;
+@alert-warning-border: #00000000;
+@alert-warning-text: #ff00ff;
+
+@alert-danger-bg: @spring-light-grey;
+@alert-danger-border: #00000000;
+@alert-danger-text: #ff00ff;
+
+@alert-success-bg: @spring-light-grey;
+@alert-success-border: @spring-green;
+@alert-success-text: @spring-brown;
 
 
 .table > thead > tr > th {
   background-color: lighten(@spring-brown, 3%);
   color: @spring-light-grey;
+}
+
+.alert-variant(@bg; @border; @text) {
+  background-color: @bg;
+  border: @border;
+  color: @text;
 }
 
 .table-filter {
@@ -125,6 +146,21 @@ h1 {
 }
 [ng-cloak] {
   display: none;
+}
+
+.label-success {
+  color: @spring-green;
+}
+.label-warning {
+ color: @spring-brown;
+}
+
+.label-danger {
+  color: #00FF0000;
+}
+
+.label-info {
+  color: @spring-grey;
 }
 
 .splash {
