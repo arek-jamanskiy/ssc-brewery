@@ -39,13 +39,18 @@ import java.util.List;
 import java.util.UUID;
 
 
-@RequiredArgsConstructor
+//@RequiredArgsConstructor
 @RequestMapping("/beers")
 @Controller
 public class BeerController {
 
     private final BeerRepository beerRepository;
     private final BeerInventoryRepository beerInventoryRepository;
+    BeerController(BeerRepository beerRepository, BeerInventoryRepository beerInventoryRepository){
+        this.beerRepository = beerRepository;
+        this.beerInventoryRepository = beerInventoryRepository;
+        System.out.println("ddd");
+    }
 
 
     @RequestMapping("/find")
